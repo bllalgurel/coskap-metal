@@ -83,5 +83,26 @@ makine kurulum ve metal üretim çözümleri sunan uzman bir mühendislik firmas
 </body>
 </html>
 
+<script>
+function sendWhatsApp() {
 
+let ad = document.querySelector('input[name="adsoyad"]').value;
+let firma = document.querySelector('input[name="firma"]').value;
+let tel = document.querySelector('input[name="telefon"]').value;
+let mail = document.querySelector('input[name="email"]').value;
+let mesaj = document.querySelector('textarea[name="mesaj"]').value;
 
+let text = `Yeni Teklif Talebi:%0A
+Ad Soyad: ${ad}%0A
+Firma: ${firma}%0A
+Telefon: ${tel}%0A
+Email: ${mail}%0A
+Mesaj: ${mesaj}`;
+
+let phone = "905421837978";
+
+let url = `https://wa.me/${phone}?text=${text}`;
+
+window.open(url, '_blank');
+}
+</script>
